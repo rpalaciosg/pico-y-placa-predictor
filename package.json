@@ -1,0 +1,19 @@
+{
+  "name": "pico-y-placa-predictor",
+  "version": "1.0.0",
+  "description": "App that predicts, if your vehicle can circulate based on a list of rules per by date and time.",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "author": "Richard Palacios G.",
+  "license": "MIT",
+  "devDependencies": {
+    "cz-conventional-changelog": "^3.3.0"
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
+  }
+}
