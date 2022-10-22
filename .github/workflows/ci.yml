@@ -1,0 +1,33 @@
+name: CI
+
+on: push
+
+jobs:
+  unit:
+    runs-on: ubuntu-latest
+    name: Lint and test
+    timeout-minutes: 5
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+
+      - name: Cache node modules
+        uses: actions/cache@v2
+        env:
+          cache-name: cache-node-modules
+        with:
+          path: ~/.npm
+          key: ${{ runner.os }}-build-${{ env.cache-name}}-${{ hashFiles('**/package-lock.json') }}
+          restore-keys: /
+            ${{ runner.os }}-build-${{ env.cache-name }}-
+            ${{ runner.os }}-build-
+            ${{ runner.os }}-
+
+      - name: Install dependencies
+        run: npm Install
+
+      - name: Lint code style
+        run: npm run Lint
+
+      - name: Run tests
+        run: npm run test
