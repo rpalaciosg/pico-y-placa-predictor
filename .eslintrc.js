@@ -7,6 +7,8 @@ module.exports = {
   extends: [
     "plugin:@typescript-eslint/recommended",
     "plugin:prettier/recommended",
+    "eslint:recommended",
+    "plugin:jest/recommended",
   ],
   plugins: ["simple-import-sort", "import"],
   parserOptions: {
@@ -21,7 +23,7 @@ module.exports = {
     "import/no-duplicates": "error",
     "linebreak-style": ["error", "unix"],
     indent: ["error", 4],
-    quotes: ["error", "single"],
-    semi: ["error", "always"],
+    // quotes: ["error", "single"],
+    // semi: ["error", "always"],
   },
 };

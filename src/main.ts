@@ -3,7 +3,7 @@ export class Main {
 
   constructor(private readonly placa: string) {}
 
-  predictor(): string {
-    return `${this.MESSAGE} ${this.placa} Si circula!`
+    predictor(): string {
+    return `${this.MESSAGE} ${this.placa} Si circula!`;
   }
 }
