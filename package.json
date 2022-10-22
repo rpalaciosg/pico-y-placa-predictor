@@ -2,10 +2,11 @@
   "name": "pico-y-placa-predictor",
   "version": "1.0.0",
   "description": "App that predicts, if your vehicle can circulate based on a list of rules per by date and time.",
-  "main": "index.js",
+  "main": "main.js",
   "scripts": {
     "tsc": "tsc",
     "test": "jest",
+    "test:watch": "jest --watchAll",
     "lint": "eslint --ignore-path .gitignore . --ext .ts",
     "lint:fix": "npm run lint -- --fix"
   },
