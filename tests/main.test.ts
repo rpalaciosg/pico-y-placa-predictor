@@ -8,4 +8,12 @@ describe("Predictor should", () => {
 
     expect(randomInstantiator).not.toThrow(TypeError);
   });
+
+
+  it('return a string message',() => {
+    const randomIntastantiator = new Main("AAA-001");
+    const expectedMessage = "Esta placa AAA-001 Si circula!"
+    expect(true).toBe(true);
+    expect(randomIntastantiator).toEqual(expectedMessage);
+  });
 });
